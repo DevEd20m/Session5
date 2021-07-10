@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingTop="16dp">
+
+    <ImageView
+        android:id="@+id/imageViewBackgroundStatusWeather"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textViewDescriptionTimeNow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDescriptionWeatherNow"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDescriptionPercentTemperature"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBackgroundStatusWeather"
+        app:layout_constraintTop_toTopOf="@id/imageViewBackgroundStatusWeather"
+        tools:text="13:00" />
+
+    <TextView
+        android:id="@+id/textViewDescriptionWeatherNow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBackgroundStatusWeather"
+        app:layout_constraintEnd_toStartOf="@+id/textViewDescriptionPercentTemperature"
+        app:layout_constraintStart_toEndOf="@+id/imageViewBackgroundStatusWeather"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionTimeNow"
+        tools:text="Despejado" />
+
+    <TextView
+        android:id="@+id/textViewDescriptionPercentTemperature"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewDescriptionWeatherNow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewDescriptionTimeNow"
+        tools:text="22°" />
+
+    <View
+        android:id="@+id/viewDelimiterBottom"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewDescriptionWeatherNow"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBackgroundStatusWeather" />
+</androidx.constraintlayout.widget.ConstraintLayout>
