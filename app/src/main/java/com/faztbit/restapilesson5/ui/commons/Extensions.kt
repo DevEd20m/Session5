@@ -2,6 +2,7 @@ package com.faztbit.restapilesson5.ui.commons
 
 import android.content.Context
 import android.content.SharedPreferences
+import android.net.ConnectivityManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -50,6 +51,14 @@ inline fun <reified T> SharedPreferences.get(key: String, defaultValue: T): T {
 
     return defaultValue
 }
+
+fun Context.isAvailableNetwork(): Boolean {
+    val connectivityManager =
+        this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+    val networkInfo = connectivityManager.activeNetworkInfo
+    return networkInfo != null && networkInfo.isConnected
+}
+
 
 
 inline fun <reified T> SharedPreferences.put(key: String, value: T): T {

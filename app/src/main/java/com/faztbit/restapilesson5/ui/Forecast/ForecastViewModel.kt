@@ -29,6 +29,7 @@ class ForecastViewModel(private val repository: ServerRepository) : ViewModel() 
             is DataResponse.ServerError -> _onMessageError.postValue(result.errorCode.message)
             is DataResponse.Success -> _forecast.postValue(result.data?.list)
             is DataResponse.TimeOutException -> _onMessageError.postValue(result.errorCode.message)
+            is DataResponse.NotConnectivity -> _onMessageError.postValue(result.data)
         }
     }
 

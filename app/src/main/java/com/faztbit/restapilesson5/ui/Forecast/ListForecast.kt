@@ -48,7 +48,7 @@ class ListForecast : AppCompatActivity() {
             ForecastViewModel(
                 ServerRepository(
                     ApiClient.endPoint,
-                    "b4105763183d0d9a84906913ea4d972d"
+                    "b4105763183d0d9a84906913ea4d972d", application
                 )
             )
         }
