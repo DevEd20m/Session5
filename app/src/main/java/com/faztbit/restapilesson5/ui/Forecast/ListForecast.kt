@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.faztbit.restapilesson5.data.server.ServerRepository
 import com.faztbit.restapilesson5.data.server.config.ApiClient
 import com.faztbit.restapilesson5.databinding.ActivityListForecastBinding
+import com.faztbit.restapilesson5.ui.commons.UserSingleton
 import com.faztbit.restapilesson5.ui.commons.getViewModel
 import com.faztbit.restapilesson5.ui.commons.toast
 
@@ -21,9 +22,28 @@ class ListForecast : AppCompatActivity() {
         setUpViewModel()
         setUpRecyclerView()
         setUpViewModelObserver()
+        events()
     }
 
-    private fun setUpViewModel() {
+    override fun onStart() {
+        super.onStart()
+        if (UserSingleton.getSession()) {
+            binding.textViewSessionName.text = UserSingleton.getName()
+        } else {
+            binding.textViewSessionName.text = "SIN SESSIÓN"
+        }
+    }
+
+    private fun events() {
+        with(binding) {
+            floatingButton.setOnClickListener {
+                UserSingleton.setSession(true)
+                UserSingleton.setName("Edmundo")
+            }
+        }
+    }
+
+    fun setUpViewModel() {
         viewModel = getViewModel {
             ForecastViewModel(
                 ServerRepository(
@@ -45,7 +65,7 @@ class ListForecast : AppCompatActivity() {
     private fun setUpViewModelObserver() {
         viewModel.forecast.observe(this, {
             adapterForecast.list = it
-//            adapterForecast.notifyDataSetChanged()
+
         })
         viewModel.onMessageError.observe(this, {
             toast(it)
