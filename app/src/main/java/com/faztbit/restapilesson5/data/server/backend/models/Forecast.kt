@@ -1,8 +1,9 @@
-package com.faztbit.restapilesson5.data.server.models
+package com.faztbit.restapilesson5.data.server.backend.models
 
 import com.google.gson.annotations.SerializedName
 
 data class MainForecast(@SerializedName("list") val list: List<Forecast>)
+@Entity(name="Forecast")
 data class Forecast(
     @SerializedName("dt")
     val dt: Int?,

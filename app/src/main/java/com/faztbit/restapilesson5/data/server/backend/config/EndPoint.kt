@@ -1,7 +1,7 @@
-package com.faztbit.restapilesson5.data.server.config
+package com.faztbit.restapilesson5.data.server.backend.config
 
-import com.faztbit.restapilesson5.data.server.models.MainForecast
-import com.faztbit.restapilesson5.data.server.models.WeatherData
+import com.faztbit.restapilesson5.data.server.backend.models.MainForecast
+import com.faztbit.restapilesson5.data.server.backend.models.WeatherData
 import retrofit2.Response
 import retrofit2.http.*
 

@@ -2,10 +2,9 @@ package com.faztbit.restapilesson5.ui.Forecast
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.faztbit.restapilesson5.data.server.ServerRepository
-import com.faztbit.restapilesson5.data.server.config.ApiClient
+import com.faztbit.restapilesson5.data.server.backend.ServerRepository
+import com.faztbit.restapilesson5.data.server.backend.config.ApiClient
 import com.faztbit.restapilesson5.databinding.ActivityListForecastBinding
 import com.faztbit.restapilesson5.ui.commons.UserSingleton
 import com.faztbit.restapilesson5.ui.commons.getViewModel

@@ -3,10 +3,10 @@ package com.faztbit.restapilesson5.ui.Forecast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.faztbit.restapilesson5.data.server.ServerRepository
-import com.faztbit.restapilesson5.data.server.dataReponse.DataResponse
-import com.faztbit.restapilesson5.data.server.models.Forecast
-import com.faztbit.restapilesson5.data.server.models.MainForecast
+import com.faztbit.restapilesson5.data.server.backend.ServerRepository
+import com.faztbit.restapilesson5.data.server.backend.dataReponse.DataResponse
+import com.faztbit.restapilesson5.data.server.backend.models.Forecast
+import com.faztbit.restapilesson5.data.server.backend.models.MainForecast
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 

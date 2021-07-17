@@ -1,4 +1,4 @@
-package com.faztbit.restapilesson5.data.server.config
+package com.faztbit.restapilesson5.data.server.backend.config
 
 import okhttp3.Interceptor
 import okhttp3.Response

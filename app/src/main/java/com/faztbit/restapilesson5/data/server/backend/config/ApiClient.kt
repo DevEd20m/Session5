@@ -1,4 +1,4 @@
-package com.faztbit.restapilesson5.data.server.config
+package com.faztbit.restapilesson5.data.server.backend.config
 
 import com.faztbit.restapilesson5.ui.commons.Constants
 import okhttp3.OkHttpClient

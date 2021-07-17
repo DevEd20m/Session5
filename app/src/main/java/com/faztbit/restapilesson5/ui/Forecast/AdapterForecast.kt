@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.faztbit.restapilesson5.R
-import com.faztbit.restapilesson5.data.server.models.Forecast
+import com.faztbit.restapilesson5.data.server.backend.models.Forecast
 import com.faztbit.restapilesson5.databinding.ItemForecastBinding
 import com.faztbit.restapilesson5.ui.commons.basicDiffUtil
 import com.faztbit.restapilesson5.ui.commons.inflate

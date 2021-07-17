@@ -1,4 +1,4 @@
-package com.faztbit.restapilesson5.data.server.dataReponse
+package com.faztbit.restapilesson5.data.server.backend.dataReponse
 
 import java.util.concurrent.TimeoutException
 

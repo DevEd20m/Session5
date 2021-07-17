@@ -1,17 +1,16 @@
-package com.faztbit.restapilesson5.data.server
+package com.faztbit.restapilesson5.data.server.backend
 
 import android.app.Application
-import com.faztbit.restapilesson5.data.server.config.EndPoint
-import com.faztbit.restapilesson5.data.server.dataReponse.DataResponse
-import com.faztbit.restapilesson5.data.server.dataReponse.ErrorServer
-import com.faztbit.restapilesson5.data.server.models.Forecast
-import com.faztbit.restapilesson5.data.server.models.MainForecast
+import com.faztbit.restapilesson5.data.server.backend.config.EndPoint
+import com.faztbit.restapilesson5.data.server.backend.dataReponse.DataResponse
+import com.faztbit.restapilesson5.data.server.backend.dataReponse.ErrorServer
+import com.faztbit.restapilesson5.data.server.backend.models.MainForecast
 import com.faztbit.restapilesson5.ui.commons.isAvailableNetwork
 import com.google.gson.Gson
 import java.util.concurrent.TimeoutException
 
 
-class ServerRepository(private val endPoint: EndPoint, private val apiKey: String,private val app :Application) {
+class ServerRepository(private val endPoint: EndPoint, private val apiKey: String, private val app :Application) {
 
     suspend fun getCurrentForecast(country: String): DataResponse<MainForecast> {
         try {
