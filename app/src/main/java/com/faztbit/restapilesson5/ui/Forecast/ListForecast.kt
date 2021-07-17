@@ -9,6 +9,7 @@ import com.faztbit.restapilesson5.databinding.ActivityListForecastBinding
 import com.faztbit.restapilesson5.ui.commons.UserSingleton
 import com.faztbit.restapilesson5.ui.commons.getViewModel
 import com.faztbit.restapilesson5.ui.commons.toast
+import kotlinx.coroutines.Dispatchers
 
 class ListForecast : AppCompatActivity() {
     private lateinit var binding: ActivityListForecastBinding
@@ -48,7 +49,7 @@ class ListForecast : AppCompatActivity() {
                 ServerRepository(
                     ApiClient.endPoint,
                     "b4105763183d0d9a84906913ea4d972d", application
-                )
+                ), Dispatchers.Main
             )
         }
     }
